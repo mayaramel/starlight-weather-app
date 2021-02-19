@@ -1,14 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>💫 Starlight | Weather App</title>
+
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Starlight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b12c2c7ad0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    Hello World
-    <script src="script.js"></script>
+    <div class="container">
+      <div class="weather-app">
+        <!--Search Bar-->
+        <form id="search-form">
+          <div class="row search-engine">
+            <div class="col-7">
+              <input
+                type="search"
+                id="city-input"
+                placeholder="Search City"
+                class="form-control w-100"
+                autocomplete="off"
+                autofocus="on"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                id="search-icon"
+                value="🔍"
+                class="form-control"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+        <!--Day & Time-->
+        <div class="date" id="date">
+          Last updated:
+          <span class="col lastUpdate" id="last-updated">Friday 22:29</span>
+        </div>
+        <!--Current Parameters-->
+
+        <div class="float-left">
+          <h1>
+            <span class="current-temperature" id="current-temperature"></span
+            ><span class="units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+          </h1>
+        </div>
+
+        <h2 id="city-name"></h2>
+
+        <div class="current-description">
+          <span id="description"></span>
+          <span id="current-icon"> 🌧 </span>
+        </div>
+
+        <div class="parameters">
+          ℹ️ Feels like: <span id="feels"> </span>°
+          <br />
+          💧 Humidity:
+          <span id="humidity"> </span>%
+          <br />
+          💨 Wind: <span id="wind"> </span>km/h
+        </div>
+
+        <!--Previsions-->
+
+        <div class="row previsions" id="forecast">
+          <div class="col p-0">
+            <ul>
+              <li class="forecast-hours">23:00</li>
+              <li class="forecast-icons">🌧</li>
+              <li class="forecast-temperatures">
+                <strong>
+                  <span class="forecast-max"> 9 </span>
+                  °
+                </strong>
+                <span class="forecast-min">3 </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col p-0">
+            <ul>
+              <li class="forecast-hours">02:00</li>
+              <li class="forecast-icons">🌧</li>
+              <li class="forecast-temperatures">
+                <strong>
+                  <span class="forecast-max"> 9 </span>
+                  °
+                </strong>
+                <span class="forecast-min">3 </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col p-0">
+            <ul>
+              <li class="forecast-hours">05:00</li>
+              <li class="forecast-icons">🌧</li>
+              <li class="forecast-temperatures">
+                <strong>
+                  <span class="forecast-max"> 9 </span>
+                  °
+                </strong>
+                <span class="forecast-min">3 </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <footer>
+          <p class="contact">Code by Mayara Melati</p>
+        </footer>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
