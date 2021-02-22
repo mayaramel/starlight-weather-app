@@ -5,6 +5,11 @@ body {
 
 .container {
   font-family: "Nunito", sans-serif;
+  color: #6b322d;
+}
+
+.city-name {
+  font-weight: 900;
 }
 
 footer {
@@ -71,6 +76,7 @@ li {
   display: block;
   margin: 0 auto;
   text-align: center;
+  color: #b44e36;
 }
 
 #search-form {
