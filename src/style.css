@@ -3,6 +3,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.container {
+  font-family: "Nunito", sans-serif;
+}
+
 footer {
   margin: 30px;
   text-align: center;
