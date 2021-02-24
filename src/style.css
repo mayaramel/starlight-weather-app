@@ -1,11 +1,23 @@
 body {
-  background-image: url("/Users/may/Documents/Projects/starlight-weather-app/images/moonlight5.jpg");
+  background-image: url("/Users/may/Documents/Projects/starlight-weather-app/images/starry_sky_clouds_sunset.jpg");
   background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+  color: #2a2738;
+  text-shadow: 1px 1px 2px rgb(157, 156, 160);
+  font-weight: bolder;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  color: #5c596b;
 }
 
 .container {
   font-family: "Nunito", sans-serif;
-  color: #6b322d;
+  color: #e0d9d8;
+  text-shadow: 1px 1px 2px rgb(8, 2, 37);
 }
 
 .city-name {
@@ -54,7 +66,8 @@ li {
 }
 
 .weather-app {
-  background-image: linear-gradient(45deg, #e2c9af 30%, #775233 100%);
+  background-image: linear-gradient(to top, #d17e77 0%, #5c596b 100%);
+  opacity: 0.94;
   border: none;
   border-radius: 30px;
   box-shadow: 10px 5px 25px black;
