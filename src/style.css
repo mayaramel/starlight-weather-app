@@ -4,8 +4,8 @@ body {
 }
 a {
   text-decoration: none;
-  color: #2a2738;
-  text-shadow: 1px 1px 2px rgb(157, 156, 160);
+  color: #110c2c;
+  text-shadow: 1px 1px 1px rgb(174, 167, 209);
   font-weight: bold;
 }
 
@@ -17,7 +17,7 @@ a:hover {
 .container {
   font-family: "Nunito", sans-serif;
   color: #e0d9d8;
-  text-shadow: 1px 1px 2px rgb(8, 2, 37);
+  text-shadow: 2px 2px #0d1f30;
 }
 
 .city-name {
@@ -101,7 +101,7 @@ li {
 }
 
 #search-form {
-  margin: 20px 15px 10px 15px;
+  margin: 20px 18px 10px 18px;
 }
 
 #search-icon {
