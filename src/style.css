@@ -29,8 +29,13 @@ a:hover {
   margin-bottom: 10px;
 }
 
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
 footer {
-  margin: 30px;
+  margin: 60px 20px 20px 20px;
   text-align: center;
 }
 
@@ -56,6 +61,12 @@ li {
   border-radius: 30px;
   padding: 5px;
   text-align: center;
+}
+
+.col-7,
+.col-2,
+.col-3 {
+  padding: 8px;
 }
 
 .parameters {
@@ -90,7 +101,7 @@ li {
 }
 
 #search-form {
-  margin-bottom: 10px;
+  margin: 20px 15px 10px 15px;
 }
 
 #search-icon {
