@@ -7,7 +7,6 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-
   let dayIndex = date.getDay();
   let days = [
     "Sunday",
@@ -22,7 +21,6 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
-
 let dateElement = document.querySelector("#last-updated");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
