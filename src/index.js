@@ -27,8 +27,11 @@ dateElement.innerHTML = formatDate(currentTime);
 
 function showTemperature(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
+
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -70,28 +73,35 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celsiusTemperature = null;
+
+
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-function convertToCelsius(event) {
-  event.preventDefault();
-  let celsiusElement = document.querySelector("#celsius-link");
-  celsiusElement.innerHTML = 19;
-}
+// function convertToCelsius(event) {
+//   event.preventDefault();
+//   let celsiusElement = document.querySelector("#celsius-link");
+//   celsiusElement.innerHTML = 19;
+// }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitElement = document.querySelector("#fahrenheit-link");
-  fahrenheitElement.innerHTML = 66;
-}
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+
+// let celsiusLink = document.querySelector("#celsius-link");
+// celsiusLink.addEventListener("click", convertToCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
+fahrenheitLink.addEventListener("click", showFahrenheit);
 
 searchCity("The Hague");
