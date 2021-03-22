@@ -39,7 +39,6 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
-
 function showTemperature(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
 
@@ -62,15 +61,12 @@ function showTemperature(response) {
     iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-
 function generateForecastHtml(forecast) {
 return `<div class="col-3 forecast"> <p>${formatHours(forecast.dt)}</ br>  <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"<p> </ br>   <strong>
                   <span class="forecast-max">${Math.round(forecast.main.temp_max)}</span>
                   °
                 </strong>
                 <span class="forecast-min">${Math.round(forecast.main.temp_min)}</span>° <p> </div>`
-
-
 }
 
 function showForecast(response){
