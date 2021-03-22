@@ -31,6 +31,10 @@ a:hover {
   margin-bottom: 10px;
 }
 
+#current-temperature {
+  font-size: 60px;
+}
+
 footer {
   margin: 40px 20px 20px 20px;
   text-align: center;
@@ -77,6 +81,7 @@ h2 {
   display: block;
   margin: 0 auto;
   padding: 30px;
+  width: 45%;
 }
 
 #description {
