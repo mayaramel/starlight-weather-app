@@ -42,10 +42,6 @@ h2 {
   margin: 0;
 }
 
-li {
-  list-style: none;
-}
-
 .date {
   margin-bottom: 50px;
   text-align: center;
@@ -111,11 +107,12 @@ button {
   margin: 10px 0px 20px 0px;
 }
 
-/* ul {
+p {
+  text-align: center;
+  margin: 0px;
+}
+
+img {
   display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-} */
+  margin: 0 auto;
+}

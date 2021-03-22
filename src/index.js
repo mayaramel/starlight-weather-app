@@ -64,19 +64,13 @@ function showTemperature(response) {
 
 
 function generateForecastHtml(forecast) {
-  return `<div class="col-3">
-            <ul>
-              <li class="forecast-hours">${formatHours(forecast.dt)}</li>
-              <li class="forecast-icons"><img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" /></li>
-              <li class="forecast-temperatures">
-                <strong>
+return `<div class="col-3 forecast"> <p>${formatHours(forecast.dt)}</ br>  <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"<p> </ br>   <strong>
                   <span class="forecast-max">${Math.round(forecast.main.temp_max)}</span>
                   °
                 </strong>
-                <span class="forecast-min">${Math.round(forecast.main.temp_min)}</span>
-              </li>
-            </ul>
-          </div>`
+                <span class="forecast-min">${Math.round(forecast.main.temp_min)}</span>° <p> </div>`
+
+
 }
 
 function showForecast(response){
